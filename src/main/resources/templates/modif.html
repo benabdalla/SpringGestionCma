@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>MOdification Agriculteur</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="containe row justify-content-center" style="position:relative;top:40px;">
+
+    <div class="card row justify-content-center bg-light border border-info" style="width:50%;">
+
+        <div class="card-title text-white bg-info text-center" style="height: 3rem;"><h2><b>Modifier </b></h2></div>
+
+
+        <div class="card-body row justify-content-center">
+
+            <form th:action="@{/modifag}" th:object="${agriculteur}" method="post">
+
+
+         
+
+
+                <div class="form-group">
+
+                    <label class="control-label">CIN</label>
+                    <div class="inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="first_name" placeholder="CIN " class="form-control" type="text"
+                                   th:field="*{cin}">
+                           
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="control-label">Nom</label>
+                    <div class="inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="nom" placeholder="Nom" class="form-control" type="text" th:field="*{nom}">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Prenom</label>
+                    <div class="inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="last_name" placeholder="prenom" class="form-control" type="text"
+                                   th:field="*{prenom}">
+                         
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">genre</label>
+                    <div class="selectContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+
+
+                            <select name="sexe" class="form-control selectpicker" th:field="*{sexe}">
+                                <option th:value="'M'" th:text="Male"></option>
+                                <option th:value="'F'" th:text="Female"></option>
+                            </select>
+                           
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="control-label">adresse complète</label>
+                    <div class="inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="adressea" placeholder="adresse complète" class="form-control" type="text"
+                                   th:field="*{adresse}">
+                           
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="control-label">téléphone</label>
+                    <div class="inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                            <input name="tel" placeholder="(+216)" class="form-control" type="text" th:field="*{tel}">
+                          
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row justify-content-center">
+                    <label class="control-label"></label>
+                    <div><br>
+                       
+                        <button type="submit" class="btn btn-primary btn-lg">
+                          Modifier
+                        </button>
+                    </div>
+                </div>
+
+                </fieldset>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+</div><!-- /.container -->
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ajoute Produit </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-primary bg-light">
+    <a class="navbar-brand" href="#">CMA</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+                <a class="nav-link" href="/listag">Agriculteur</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/formagri"><u>Ajouter Agriculteu</u></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Ajouter Produit</a>
+            </li>
+
+        </ul>
+
+    </div>
+</nav>
+<div class="container row justify-content-center" style=" position:relative;top:40px;">
+
+    <div class="card row justify-content-center bg-light border border-info" style="width:50%;">
+
+        <div class="card-title text-white bg-info  text-center" style="height: 3rem; "><h2><b>Ajoute Prduit </b></h2></div>
+
+
+        <div class="card-body row justify-content-center">
+
+            <form th:action="@{/ajoutprod}" th:object="${produit}" method="post">
+
+
+                <div class="form-group" hidden="true">
+                    <label class="control-label"></label>
+                    <div class=" inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <select th:field="*{idProduit}">
+                                <option  th:value="${agrid}"   th:text="${agrid}"/>
+                            </select></p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class=" control-label">Quntite</label>
+                    <div class="inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="nom" placeholder="Quntite" class="form-control" type="text" th:field="*{quntite}">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class=" control-label">Type</label>
+                    <div class=" selectContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+
+
+                            <select name="type" class="form-control selectpicker" th:field="*{type}">
+                                <option th:value="'Blue Dur'" th:text="'Bleu Dur'"></option>
+                                <option th:value="'Auteur'" th:text="'Auteur'"></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class=" control-label">Prix  fixe </label>
+                    <div class="selectContainer">
+                        <div class="input-group">
+
+                            <select name="prix" class="form-control selectpicker" th:field="*{prix}">
+                                <option th:value="'82.000'" th:text="'82DT max'"></option>
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="control-label"></label>
+                    <div><br>
+                        <button type="submit" class="btn btn-success">
+                            Enregistre</button>
+                             
+                    </div>
+                </div>
+
+
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
