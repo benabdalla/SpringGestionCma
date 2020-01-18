@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+	crossorigin="anonymous">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Font Awesome -->
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Bootstrap core CSS -->
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+	rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css"
+	rel="stylesheet">
+
+<link rel="stylesheet" type="text/css"
+	th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+<link th:href="@{/css/calender.css}" rel="stylesheet" />
+<title>Accueil</title>
+
+</head>
+<body>
+	<div>
+		<div th:fragment="header">
+			<nav class="navbar navbar-expand-sm bg-light">
+				<div>
+					<img style="height: 90px; width: 200px;"
+						src="https://scontent.ftun10-1.fna.fbcdn.net/v/t31.0-8/s960x960/15385342_639596472889948_8909020614511666176_o.jpg?_nc_cat=100&_nc_ohc=UAXyzopwgIMAQnn8gGGWmY-S8GTJrALqgP8IkHLTfPacAtDd63mKAAjQg&_nc_ht=scontent.ftun10-1.fna&_nc_tp=1&oh=569b435aff7fd4a4fe2c9241de9f7b40&oe=5EA61909" />
+				</div>
+
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link"
+						th:href="@{/etimg-fluid max-width: 100%udiant/list}"><strong>Agriculteur</strong></a></li>
+					<li class="nav-item"><a class="nav-link"
+						th:href="@{/etudiant/form}"><strong>Mandat</strong></a></li>
+					<li class="nav-item"><a class="nav-link"
+						th:href="@{/examen/list}"><strong>Quntité</strong></a></li>
+
+				</ul>
+
+				<a class="navbar-nav ml-auto" th:href="@{/logout}">
+					<button type="button"
+						class="btn btn-outline-success btn-rounded waves-effect right"
+						sec:authorize="isAuthenticated()">
+						<i class="fas fa-user pr-2" aria-hidden="true"></i> Admin
+
+					</button>
+				</a></a>
+			</nav>
+		</div>
+	</div>
+
+	<div class="container">
+		<h2 class="text-seccondary text-center">
+			<strong>Comptoir Multiservices Agricoles CMA <Strong></Strong>
+	</div>
+	<div class="container my-5">
+
+		<!-- Section -->
+		<div class="card-group">
+
+
+			<script th:src="@{/js/calender.js}"></script>
+			<div class="row">
+				<div class="col">
+					<div class="elegant-calencar">
+						<p id="reset">reset</p>
+						<div id="header" class="clearfix">
+							<div class="pre-button"><</div>
+							<div class="head-info">
+								<div class="head-day"></div>
+								<div class="head-month"></div>
+							</div>
+							<div class="next-button"
+								style="position: relative; bottom: 210px;">></div>
+						</div>
+						<table id="calendar" style="position: relative; bottom: 100px;">
+							<thead>
+								<tr>
+									<th>Sun</th>
+									<th>Mon</th>
+									<th>Tue</th>
+									<th>Wed</th>
+									<th>Thu</th>
+									<th>Fri</th>
+									<th>Sat</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td></td>
+									<div class="container">
+
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="col">
+
+					<div style="position: relative; top: 100px;">
+						<div class="card">
+
+
+
+
+
+
+							<div class="progress">
+								<div class="progress-bar bg-success" role="progressbar"
+									id="demo" aria-valuenow="25" aria-valuemin="0"
+									aria-valuemax="50">%</div>
+							</div>
+
+
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">This is a longer card with supporting
+									text below as a natural lead-in to additional content. This
+									content is a little bit longer.</p>
+								<p class="card-text">
+									<small class="text-muted">Last updated 3 mins ago</small>
+								</p>
+							</div>
+
+						</div>
+					</div>
+					<div style="position: relative; top: 200px;">
+						<div class="card">
+
+
+							<div class="progress">
+								<div class="progress-bar bg-info" role="progressbar" id="bar2"
+									style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+									aria-valuemax="100">%</div>
+
+
+							</div>
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">This card has supporting text below as
+									a natural lead-in to additional content.</p>
+								<p class="card-text">
+									<small class="text-muted">Last updated 3 mins ago</small>
+								</p>
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+
+
+					<script type="text/javascript">
+
+window.onload = function myFunction() {
+var number=[[${totale}]];
+var nb=[[${nbp}]];
+var nb=[[${nbg}]];
+var min=[[${min}]];document.getElementById("bar2").style.width =nb+"%";
+document.getElementById("bar3").style.width =pormin+"%";
+document.getElementById("bar4").style.width =pormax+"%";
+}
+var max=[[${max}]];
+pormin=min*number/100;
+pormax=max*number/100;
+por=nb*number/100;
+if(por>80){
+	document.getElementById("demo").css("background-color", "red"); 
+}
+
+document.getElementById("demo").style.width =por+"%";
+document.getElementById("bar2").style.width =nb+"%";
+document.getElementById("bar3").style.width =pormin+"%";
+document.getElementById("bar4").style.width =pormax+"%";
+
+}
+</script>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+	<div class="container my-5 py-5 z-depth-1">
+
+
+		<!--Section: Content-->
+		<section
+			class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+
+			<!--Grid row-->
+			<div class="row d-flex justify-content-center">
+
+				<!--Grid column-->
+				<div class="col-lg-8 text-center">
+
+					<h3 class="lead text-center text-muted pt-2 mb-5">
+						C'est avec grand plaisir que je vous présente les vœux les plus
+						sincères pour une nouvelle année administrative pleine de bonheur
+						et de réussite dans votre travail et votre santé et bien-être à
+						long terme. Bonne année 2020
+						<!--Image-->
+						<div class="view overlay z-depth-1-half">
+							<!--Carousel Wrapper-->
+							<div id="carousel-example-1z"
+								class="carousel slide carousel-fade" data-ride="carousel">
+								<!--Indicators-->
+								<ol class="carousel-indicators">
+									<li data-target="#carousel-example-1z" data-slide-to="0"
+										class="active"></li>
+									<li data-target="#carousel-example-1z" data-slide-to="1"></li>
+									<li data-target="#carousel-example-1z" data-slide-to="2"></li>
+								</ol>
+								<!--/.Indicators-->
+								<!--Slides-->
+								<div class="carousel-inner" role="listbox">
+									<!--First slide-->
+									<div class="carousel-item active">
+										<img class="d-block w-100"
+											src="https://scontent.ftun10-1.fna.fbcdn.net/v/t1.0-9/80068681_1361240187392236_7750419956243628032_n.jpg?_nc_cat=110&_nc_ohc=UdyeM1Q4hgoAX_qrty4&_nc_ht=scontent.ftun10-1.fna&oh=ad3621cbe9cf2c9e1206ae76e05ad966&oe=5ED84866"
+											alt="First slide">
+									</div>
+									<!--/First slide-->
+									<!--Second slide-->
+									<div class="carousel-item">
+										<img style="height: 400px; width: 700px;"
+											class="img-fluid max-width: 100%"
+											src="https://scontent.ftun10-1.fna.fbcdn.net/v/t1.0-9/81531280_1369691536547101_7542167149658243072_n.jpg?_nc_cat=101&_nc_ohc=kQs4TjsgLC8AX-xyb5N&_nc_ht=scontent.ftun10-1.fna&oh=893e4885f6efbfd3e5ca4c5c63508566&oe=5ED84B38"
+											alt="Second slide">
+									</div>
+									<!--/Second slide-->
+									<!--Third slide-->
+									<div class="carousel-item">
+										<img style="height: 400px; width: 700px;"
+											class="d-block w-100"
+											src="https://scontent.ftun10-1.fna.fbcdn.net/v/t1.0-9/s960x960/81542675_1367452600104328_6086248900753096704_o.jpg?_nc_cat=106&_nc_ohc=kLSER_ofW0EAX9M1Mqu&_nc_ht=scontent.ftun10-1.fna&_nc_tp=1002&oh=30aee2597987f44dd9a040dfe74ec253&oe=5E8DAD50"
+											alt="Third slide">
+									</div>
+									<!--/Third slide-->
+								</div>
+								<!--/.Slides-->
+								<!--Controls-->
+								<a class="carousel-control-prev" href="#carousel-example-1z"
+									role="button" data-slide="prev"> <span
+									class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+									class="sr-only">Previous</span>
+								</a> <a class="carousel-control-next" href="#carousel-example-1z"
+									role="button" data-slide="next"> <span
+									class="carousel-control-next-icon" aria-hidden="true"></span> <span
+									class="sr-only">Next</span>
+								</a>
+								<!--/.Controls-->
+							</div>
+							<!--/.Carousel Wrapper-->
+						</div>
+						<script th:src="@{/js/coursal.js}"></script>
+				</div>
+				<!--Grid column-->
+
+			</div>
+			<!--Grid row-->
+
+
+		</section>
+		<!--Section: Content-->
+
+
+	</div>
+
+
+
+
+
+
+
+
+	<section>
+
+		<h6
+			class="font-weight-bold text-center grey-text text-uppercase small mb-4">Services</h6>
+
+
+		<h3 class="font-weight-bold text-center dark-grey-text pb-2">notre
+			service</h3>
+		<hr class="w-header my-4">
+		<p class="lead text-center text-muted pt-2 mb-5">CMA Consulting
+			est à votre disposition pour les meilleurs services dans le
+			Agriculteur.</p>
+
+		<div class="row">
+
+			<div class="col-md-6 col-xl-3 mb-4">
+				<div class="card text-center text-white">
+					<div class="card-body">
+						<img style="height: 320px; width: 270px;"
+							src="https://scontent.ftun10-1.fna.fbcdn.net/v/t1.0-9/35148741_10214347300334795_6093004240064610304_n.jpg?_nc_cat=109&_nc_ohc=Nz9rb9KHRhsAX_rooa7&_nc_ht=scontent.ftun10-1.fna&oh=0184136bbf7fba2a7c0844678f729370&oe=5ED3051B">
+
+						<h5 class="font-weight-normal my-4 py-2">
+							<a class="dark-grey-text">Acheter</a>
+						</h5>
+						<p class="text-muted mb-4">Acheter le blé dur</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-xl-3 mb-4">
+				<div class="card text-center">
+					<div class="card-body">
+						<img style="height: 320px; width: 270px;"
+							src="https://scontent.ftun10-1.fna.fbcdn.net/v/t45.5328-9/75843604_2781953425171128_7890186726155485184_n.jpg?_nc_cat=105&_nc_ohc=qVDpZ2VFZ2sAX8jZWvh&_nc_ht=scontent.ftun10-1.fna&oh=ed6a921190ddda40d1c595ef80c7b7b4&oe=5E8FB7C1" />
+						<h5 class="font-weight-normal my-4 py-2">
+							<a class="dark-grey-text">Vendre</a>
+						</h5>
+						<p class="text-muted mb-4">Vendeur les Médicaments Agricoles</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-xl-3 mb-4">
+				<div class="card text-center">
+					<div class="card-body">
+						<img style="height: 320px; width: 270px;"
+							src="http://www.chemistrysources.com/wp-content/uploads/2013/11/Nitrogen-Fertilizer.jpg">
+						<h5 class="font-weight-normal my-4 py-2">
+							<a class="dark-grey-text">Vender</a>
+						</h5>
+						<p class="text-muted mb-4">Vendeur Engrais Chimiques</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-xl-3">
+				<div class="card text-center">
+					<div class="card-body">
+						<img alt="mrk" style="height: 320px; width: 270px;"
+							src="https://ultratunisia.ultrasawt.com/sites/default/files/styles/large/public/Screen%20Shot%202018-03-31%20at%2020.01.47.png?itok=JujHlDaX">
+						<h5 class="font-weight-normal my-4 py-2">
+							<a class="dark-grey-text" href="#">Vender</a>
+						</h5>
+						<p class="text-muted mb-4">Vendeur Essence et Diesel</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+	<!-- Section -->
+	<!-- Footer -->
+	<footer class="page-footer font-small mdb-color pt-4">
+
+		<!-- Footer Links -->
+		<div class="container text-center text-md-left"></div>
+	</div>
+	</div>
+	<!-- Footer links -->
+	<div class="row text-center text-md-left mt-3 pb-3">
+
+		<!-- Grid column -->
+		<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+			<h6 class="text-uppercase mb-4 font-weight-bold">CMA</h6>
+			<p>Here you can use rows and columns to organize your footer
+				content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</div>
+		<!-- Grid column -->
+
+		<hr class="w-100 clearfix d-md-none">
+
+		<!-- Grid column -->
+		<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+			<h6 class="text-uppercase mb-4 font-weight-bold">Center</h6>
+			<p>
+				<a href="#!">Manzel Tamime</a>
+			</p>
+			<p>
+				<a href="#!">Kélibia</a>
+			</p>
+			<p>
+				<a href="#!">Rahma</a>
+			</p>
+			<p>
+				Takelsa</a>
+			</p>
+		</div>
+		<!-- Grid column -->
+
+		<hr class="w-100 clearfix d-md-none">
+
+		<!-- Grid column -->
+		<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+			<h6 class="text-uppercase mb-4 font-weight-bold">Adresse</h6>
+			<p>
+				<a href="#!">ManzelTmimeCMA@gmail.com</a>
+			</p>
+			<p>
+				<a href="#!">KélibiaCMA@gmail.com</a>
+			</p>
+			<p>
+				<a href="#!">RahmaaCMA@gmail.com</a>
+			</p>
+
+
+
+			<p>
+				<a href="#!">TakelsaaCMA@gmail.com</a>
+			</p>
+		</div>
+
+		<!-- Grid column -->
+		<hr class="w-100 clearfix d-md-none">
+
+		<!-- Grid column -->
+		<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+			<h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+			<p>
+				<i class="fas fa-home mr-3"></i> 82,Avenue Louis Brailles,Tunis
+			</p>
+			<p>
+				<i class="fas fa-envelope mr-3"></i> infoCMA@gmail.com
+			</p>
+			<p>
+				<i class="fas fa-phone mr-3"></i> 71890511
+			<p>
+				<i class="fas fa-print mr-3"></i> 71890571
+			</p>
+			</p>
+		</div>
+		<!-- Grid column -->
+
+	</div>
+	<!-- Footer links -->
+
+	<hr>
+
+	<!-- Grid row -->
+	<div class="row d-flex align-items-center">
+
+		<!-- Grid column -->
+		<div class="col-md-7 col-lg-8">
+
+			<!--Copyright-->
+			<p class="text-center text-md-left">
+				© 2020 Copyright: <a
+					href="https://mdbootstrap.com/education/bootstrap/"> <strong>
+						ComptoirMultiservicesAgricoles.com</strong>
+				</a>
+			</p>
+
+		</div>
+		<!-- Grid column -->
+
+		<!-- Grid column -->
+		<div class="col-md-5 col-lg-4 ml-lg-0">
+
+			<!-- Social buttons -->
+			<div class="text-center text-md-right">
+				<ul class="list-unstyled list-inline">
+					<li class="list-inline-item"><a
+						class="btn-floating btn-sm rgba-white-slight mx-1"> <i
+							class="fab fa-facebook-f"></i>
+					</a></li>
+					<li class="list-inline-item"><a
+						class="btn-floating btn-sm rgba-white-slight mx-1"> <i
+							class="fab fa-twitter"></i>
+					</a></li>
+					<li class="list-inline-item"><a
+						class="btn-floating btn-sm rgba-white-slight mx-1"> <i
+							class="fab fa-google-plus-g"></i>
+					</a></li>
+					<li class="list-inline-item"><a
+						class="btn-floating btn-sm rgba-white-slight mx-1"> <i
+							class="fab fa-linkedin-in"></i>
+					</a></li>
+				</ul>
+			</div>
+
+		</div>
+		<!-- Grid column -->
+
+	</div>
+	<!-- Grid row -->
+
+	</div>
+	<!-- Footer Links -->
+
+	</footer>
+	<!-- Footer -->
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous">
+		
+	</script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
+
+
+	<script type="text/javascript"
+		th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+
+
+</body>
+</html>

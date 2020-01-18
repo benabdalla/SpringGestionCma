@@ -31,6 +31,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web-services</artifactId>
@@ -40,12 +46,7 @@
 		<artifactId>lombok</artifactId>
 	</dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
-        </dependency>
+        
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -67,6 +68,12 @@
     <artifactId>spring-boot-starter-security</artifactId>
       <scope>test</scope>
 </dependency>
+<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+            <scope>runtime</scope>
+</dependency>
 
     </dependencies>
 
@@ -79,4 +86,13 @@
         </plugins>
     </build>
 
+    <dependencyManagement>
+    	<dependencies>
+    		<dependency>
+    			<groupId>org.webjars</groupId>
+    			<artifactId>bootstrap</artifactId>
+    			<version>3.3.7</version>
+    		</dependency>
+    	</dependencies>
+    </dependencyManagement>
 </project>

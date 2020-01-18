@@ -27,6 +27,10 @@ public class WebController {
     private CommandeRepository commandeRepository;
     @Autowired
     private ProduitRepository produitRepository;
+    @GetMapping("/")
+    public String accueil() {
+    	return "accueil";
+    }
 
     @GetMapping("/listag")
     public String listAgri(Model model, @RequestParam(name = "page", defaultValue = "0") int p,
